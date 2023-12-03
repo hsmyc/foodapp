@@ -1,0 +1,50 @@
+* {
+  --primary: #fd8d14;
+  --secondary: #004225;
+  --tertiary: #f5f5dc;
+  --size_s: 0.5rem;
+  --size_m: 1rem;
+  --size_l: 1.5rem;
+  --size_xl: 2rem;
+  --button_height: 48px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--primary);
+  width: 100vw;
+  height: 60px;
+}
+.navbar_button_field {
+  display: flex;
+  align-items: center;
+  padding: var(--size_m);
+  gap: var(--size_s);
+}
+.navbar_button {
+  background-color: var(--secondary);
+  border: none;
+  color: var(--tertiary);
+  padding: var(--size_m);
+  height: var(--button_height);
+  border-radius: var(--size_s);
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--size_m);
+  cursor: pointer;
+}
+.navbar_button:hover {
+  box-shadow: 0 0 10px var(--tertiary);
+}
+.navbar_button:active {
+  box-shadow: inset 0 0 10px var(--tertiary);
+}
