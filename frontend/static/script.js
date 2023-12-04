@@ -1,5 +1,7 @@
 const signupButton = document.querySelector("#signup-button");
 const dataField = document.querySelector("#data-field");
+
+
 signupButton.addEventListener("click", (e) => {
   e.preventDefault();
   getButton(dataField);
