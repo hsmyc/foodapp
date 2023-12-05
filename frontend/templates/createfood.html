@@ -1,0 +1,27 @@
+{% extends 'index.html' %} {% block content %}
+<section class="food_create_section">
+  <form class="food_form" method="post">
+    <input class="input_text" type="text" name="name" placeholder="Name" />
+    <input class="input_text" type="text" name="price" placeholder="Price" />
+    <div class="input_checkbox_wrapper">
+      <p>Is halal?</p>
+      <input
+        class="input_checkbox"
+        type="checkbox"
+        name="Halal"
+        placeholder="Halal"
+      />
+    </div>
+    <div class="input_checkbox_wrapper">
+      <p>Is vegan?</p>
+      <input
+        class="input_checkbox"
+        type="checkbox"
+        name="Vegan"
+        placeholder="Vegan"
+      />
+    </div>
+    <input type="submit" value="Create" />
+  </form>
+</section>
+{% endblock %}

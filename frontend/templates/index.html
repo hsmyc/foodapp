@@ -8,16 +8,25 @@
       rel="stylesheet"
       href="../../frontend/static/style.css"
     />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="../../frontend/static/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Food App</title>
   </head>
   <body>
     <div class="navbar">
       <div class="navbar_button_field">
-        <button class="navbar_button">Log in</button>
-        <button id="signup-button" class="navbar_button">Sign up</button>
+        <button class="navbar_button">
+          <a href="/createfood">Create Food</a>
+        </button>
+        <button class="navbar_button">
+          <a href="/">Home</a>
+        </button>
       </div>
     </div>
-    <div id="data-field">Mualla</div>
+    {% block content %}{% endblock %}
     <script src="../../frontend/static/script.js"></script>
   </body>
 </html>
