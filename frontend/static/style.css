@@ -79,3 +79,75 @@ p {
   width: var(--size_m);
   height: var(--size_m);
 }
+
+
+/* Style for the search container */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the search bar */
+#search-bar {
+  padding: 8px;
+  border: 1px solid #004225;
+  border-radius: 4px;
+  margin-right: 5px;
+  color: #004225;
+}
+
+/* Style for the search button */
+.search-btn {
+  padding: 8px 15px;
+  border: 1px solid #004225;
+  border-radius: 4px;
+  background-color: #FD8D14;
+  cursor: pointer;
+  color: #004225;
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: #004225;
+}
+
+/* Style for the dropdown button */
+.dropbtn {
+  padding: 8px 15px;
+  border: 1px solid #004225;
+  border-radius: 4px;
+  background-color: #FD8D14;
+  cursor: pointer;
+  color: #004225;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+  color: #004225;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #F5F5DC;
+}

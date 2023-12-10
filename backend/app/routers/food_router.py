@@ -7,9 +7,9 @@ router = APIRouter()
 templates = Jinja2Templates(directory="../../frontend/templates")
 
 
-@router.get('/food')
+@router.get('/foodsearch')
 def read_food(request: Request):
-    return templates.TemplateResponse("food.html", {"request": request})
+    return templates.TemplateResponse("foodsearch.html", {"request": request})
 
 
 @router.get('/createfood')
