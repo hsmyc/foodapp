@@ -6,3 +6,5 @@ class Food(BaseModel):
     price: float
     isVegan: bool
     isHalal: bool
+    isVegetarian: bool
+    isGlutenFree: bool
