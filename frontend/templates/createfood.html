@@ -1,6 +1,6 @@
 {% extends 'index.html' %} {% block content %}
 <section class="food_create_section">
-  <form class="food_form" method="post">
+  <form id="food_form" class="food_form">
     <input class="input_text" type="text" name="name" placeholder="Name" />
     <input class="input_text" type="text" name="price" placeholder="Price" />
     <div class="input_checkbox_wrapper">
@@ -31,15 +31,23 @@
       />
     </div>
     <div class="input_checkbox_wrapper">
-      <p>Is Gluten Free?</p>
+      <p>Is gluten free?</p>
       <input
         class="input_checkbox"
         type="checkbox"
-        name="Gluten-free"
+        name="gluten"
         placeholder="Gluten"
       />
     </div>
-    <input type="submit" value="Create" />
+    <input
+      id="food_send"
+      class="secondary_button"
+      type="submit"
+      value="Create"
+    />
   </form>
+  <div id="food_create_message" class="food_create_message">
+    <p id="food_create_message_text" class="food_create_message_text"></p>
+  </div>
 </section>
 {% endblock %}

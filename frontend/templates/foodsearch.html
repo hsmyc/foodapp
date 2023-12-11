@@ -1,15 +1,14 @@
-{% extends 'index.html' %}
-{% block content %}
-    <div class="search-container">
-        <input type="text" placeholder="Search food..." id="search-bar">
-        <div class="dropdown">
-          <button class="dropbtn">When</button>
-          <div class="dropdown-content">
-            <a href="#">Now</a>
-            <a href="#">1 hour later</a>
-            <a href="#">Tomorrow</a>
-          </div>
-        </div>
-        <button type="submit" class="search-btn">Search</button>
-      </div>
+{% extends 'index.html' %} {% block content %}
+<div class="search-container">
+  <input type="text" placeholder="Search food..." id="search-bar" />
+  <div class="dropdown">
+    <button class="secondary_button">When</button>
+    <div class="dropdown-content">
+      <a href="#">Now</a>
+      <a href="#">1 hour later</a>
+      <a href="#">Tomorrow</a>
+    </div>
+  </div>
+  <button type="submit" class="secondary_button">Search</button>
+</div>
 {% endblock %}
