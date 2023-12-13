@@ -12,3 +12,9 @@ templates = Jinja2Templates(directory="../../frontend/templates")
 @app.get("/")
 def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+
+@app.get("/foodsearch")
+def read_food_search(request: Request):
+    return templates.TemplateResponse("foodsearch.html", {"request": request})
+
