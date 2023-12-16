@@ -53,6 +53,7 @@ p {
   background-color: var(--primary);
   cursor: pointer;
   color: var(--secondary);
+  margin-right: 10px;
 }
 /* Styled components end */
 
@@ -100,13 +101,15 @@ p {
 .search-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 #search-bar {
   padding: 8px;
   border: 1px solid #004225;
   border-radius: 4px;
-  margin-right: 5px;
+  margin-right: 10px;
   color: #004225;
 }
 
