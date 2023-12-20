@@ -1,4 +1,4 @@
-const route = "http://127.0.0.1:8000/food";
+const postroute = "http://127.0.0.1:8000/food";
 
 document.getElementById("food_send").addEventListener("click", function (e) {
   e.preventDefault();
@@ -14,7 +14,7 @@ document.getElementById("food_send").addEventListener("click", function (e) {
     isPescatarian: form.Pescatarian.checked,
   };
   console.log(formData);
-  fetch(route, {
+  fetch(postroute, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,3 +31,20 @@ document.getElementById("food_send").addEventListener("click", function (e) {
       console.error("Error:", error);
     });
 });
+
+function getAllFoods() {
+  const foodName = document.getElementById("foodname").value;
+  fetch(`http://127.0.0.1:8000/allfoods/${foodName}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      if (data) {
+        const foodList = document.getElementById("food_list");
+        foodList.innerHTML = "";
+        const foodItem = document.createElement("p");
+        foodItem.innerText = `${data.name} - ${data.price} euro`;
+        foodList.appendChild(foodItem);
+      }
+    });
+}

@@ -40,3 +40,22 @@ def create_food(food: Food):
         raise HTTPException(
             status_code=400, detail="Food must be either halal, vegan, vegetarian or gluten free")
     return {"message": "Food successfully added", "id": str(result.inserted_id)}
+
+
+@router.get('/allfoods/{q}')
+def allfoods(q: str = None):
+    foods = []
+    for food in collectionhalal.find():
+        foods.append(food)
+    for food in collectionvegan.find():
+        foods.append(food)
+    for food in collectionvegetarian.find():
+        foods.append(food)
+    for food in collectionglutenfree.find():
+        foods.append(food)
+    for food in foods:
+        if q is not None and q.lower() in food['name'].lower():
+            print(q)
+            return {"name": food['name'], "price": food['price']}
+        else:
+            continue
