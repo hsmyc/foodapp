@@ -11,6 +11,7 @@ document.getElementById("food_send").addEventListener("click", function (e) {
     isVegan: form.Vegan.checked,
     isVegetarian: form.Vegetarian.checked,
     isGlutenFree: form["gluten"].checked,
+    isPescatarian: form.Pescatarian.checked,
   };
   console.log(formData);
   fetch(route, {

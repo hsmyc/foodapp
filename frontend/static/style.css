@@ -98,6 +98,14 @@ p {
   height: var(--size_m);
 }
 
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .search-container {
   display: flex;
   align-items: center;

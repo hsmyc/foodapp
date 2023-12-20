@@ -8,3 +8,4 @@ class Food(BaseModel):
     isHalal: bool
     isVegetarian: bool
     isGlutenFree: bool
+    isPescatarian: bool

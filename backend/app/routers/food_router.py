@@ -2,7 +2,7 @@ from fastapi import APIRouter, Request, HTTPException
 from fastapi.encoders import jsonable_encoder
 from fastapi.templating import Jinja2Templates
 from models.food import Food
-from dependencies.database import collectionhalal, collectionvegan, collectionvegetarian, collectionglutenfree
+from dependencies.database import collectionhalal, collectionvegan, collectionvegetarian, collectionglutenfree, collectionpescatarian
 router = APIRouter()
 templates = Jinja2Templates(directory="../../frontend/templates")
 
@@ -32,6 +32,9 @@ def create_food(food: Food):
         inserted = True
     if food_data['isGlutenFree']:
         result = collectionglutenfree.insert_one(food_data)
+        inserted = True
+    if food_data['isPescatarian']:
+        result = collectionpescatarian.insert_one(food_data)
         inserted = True
     if not inserted:
         raise HTTPException(
